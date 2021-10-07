@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    font: 62, 5%;
+}
+
+/* fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* paleta de colores */
+:root {
+    --color-uno: #4c0404;
+    --color-dos: #742c0c;
+    --color-tres: #ac7c4c;
+    --color-cuatro: #904b1b;
+    --color-cinco: #9c5c24;
+    --color-seis: #b68d6c;
+    --color-siete: #d3baa2;
+    --color-ocho: #b06c34;
+}
+
+/* NavBar */
+
+.presentacion {
+    height: 100vh;
+    background-image: url(./images/cafefondo.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.NavBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.NavBar-div {
+    margin: 2rem 5rem;
+}
+
+.logo {
+    height: 8rem;
+}
+
+.dolcata {
+    height: 5rem;
+}
+
+.NavBar ul {
+    list-style: none;
+}
+
+.NavBar a {
+    color: #fff;
+    background-color: var(--color-uno);
+    border-color: var(--color-uno);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 3rem;
+    border: 0.1rem solid var(--color-uno);
+    border-radius: 20px;
+    padding: 0.3rem 0.7rem;
+}
+
+.NavBar a:hover {
+    background-color: var(--color-dos);
+    color: #fff;
+    transition: 0.8s;
+}
+
+.titulo {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+.titulo small {
+    color: var(--color-dos);
+    font-size: 3rem;
+    font-family: "Birthstone", cursive;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 5rem;
+    font-family: "Lato", sans-serif;
+    text-shadow: -1px 3px 24px rgba(0, 0, 0, 0.6);
+}
