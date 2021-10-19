@@ -2,8 +2,9 @@ import React from "react";
 import "./style.css";
 import logo from "../components/images/logo.png";
 import dolcata from "../components/images/dolcata.png";
+import { CartIconLogo } from "./CartWidget";
 
-function NavBar() {
+function NavBar({ bienvenida, titulo, link1, link2, link3 }) {
     return (
         <div className="presentacion">
             <div className="NavBar">
@@ -14,17 +15,19 @@ function NavBar() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="https://google.com">Home</a>
-                            <a href="https://google.com">Productos</a>
-                            <a href="https://google.com">Nosotros</a>
-                            <a href="https://google.com">Contacto</a>
+                            <a href="https://google.com">{link1}</a>
+                            <a href="https://google.com">{link2}</a>
+                            <a href="https://google.com">{link3}</a>
+                            <a href="https://google.com">
+                                <CartIconLogo />
+                            </a>
                         </li>
                     </ul>
                 </nav>
             </div>
             <div className="titulo">
-                <small>Bienvenidos a</small>
-                <h1> DOLCATA</h1>
+                <small> {bienvenida}</small>
+                <h1> {titulo}</h1>
             </div>
         </div>
     );
