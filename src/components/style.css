@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "poppins", sans-serif;
 }
 
 html {
@@ -58,6 +58,10 @@ html {
 
 .NavBar ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
 .NavBar a {
@@ -95,4 +99,21 @@ h1 {
     line-height: 5rem;
     font-family: "Lato", sans-serif;
     text-shadow: -1px 3px 24px rgba(0, 0, 0, 0.6);
+}
+
+.NavBar .cartLogo {
+    background-color: #fff;
+    text-decoration: none;
+    margin-right: 3rem;
+    padding: 0.3rem 0.7rem;
+    border: none;
+}
+
+.NavBar .cartLogo:hover {
+    background-color: transparent;
+}
+
+.cartLogo img {
+    width: 5rem;
+    padding-top: 0.5rem;
 }

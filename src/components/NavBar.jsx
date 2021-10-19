@@ -18,8 +18,11 @@ function NavBar({ bienvenida, titulo, link1, link2, link3 }) {
                             <a href="https://google.com">{link1}</a>
                             <a href="https://google.com">{link2}</a>
                             <a href="https://google.com">{link3}</a>
-                            <a href="https://google.com">
-                                <CartIconLogo />
+                        </li>
+                        <li>
+                            <a className="cartLogo" href="https://google.com">
+                                {" "}
+                                <CartIconLogo />{" "}
                             </a>
                         </li>
                     </ul>
