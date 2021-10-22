@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from "../src/components/NavBar";
 import { ItemList } from "./components/containers/ItemListContainers";
+import { ItemCount } from "./components/ItemCount";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 link3="Contacto"
             />
             <ItemList greeting="ACA VAN A ESTAR LAS CARDS CON PRODUCTOS" />
+            <ItemCount />
         </div>
     );
 }

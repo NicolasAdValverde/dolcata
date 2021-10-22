@@ -25,6 +25,13 @@ html {
     --color-siete: #d3baa2;
     --color-ocho: #b06c34;
 }
+/* CLASES GENERALES */
+.centrar {
+    display: flex;
+    justify-content: content;
+    align-items: center;
+    flex-direction: column;
+}
 
 /* NavBar */
 
