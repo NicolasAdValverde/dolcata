@@ -1,6 +1,6 @@
 import "./App.css";
-import NavBar from "../src/components/NavBar";
-import { ItemList } from "./components/containers/ItemListContainers";
+import { ItemListContainer } from "./components/containers/ItemListContainer/ItemListContainers";
+import NavBar from "./components/NavBar";
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
                 link2="Productos"
                 link3="Contacto"
             />
-            <ItemList greeting="ACA VAN A ESTAR LAS CARDS CON PRODUCTOS" />
+            <ItemListContainer />
         </div>
     );
 }

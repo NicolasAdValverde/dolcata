@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import logo from "../components/images/logo.png";
 import dolcata from "../components/images/dolcata.png";
-import { CartIconLogo } from "./CartWidget";
+import { CartIconLogo } from "../components/CartWidget";
 
 function NavBar({ bienvenida, titulo, link1, link2, link3 }) {
     return (

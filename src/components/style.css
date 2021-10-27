@@ -124,3 +124,30 @@ h1 {
     width: 5rem;
     padding-top: 0.5rem;
 }
+
+/* cards */
+
+.contain-cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cards {
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 20%;
+    margin: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-card {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
