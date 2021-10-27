@@ -1,4 +1,5 @@
 import "./App.css";
+import { ItemDetailContainer } from "../src/components/containers/ItemdetailContainer/ItemDetailContainer";
 import { ItemListContainer } from "./components/containers/ItemListContainer/ItemListContainers";
 import NavBar from "./components/NavBar";
 
@@ -13,6 +14,7 @@ function App() {
                 link3="Contacto"
             />
             <ItemListContainer />
+            <ItemDetailContainer />
         </div>
     );
 }

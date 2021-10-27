@@ -16,8 +16,8 @@ export function ItemListContainer() {
             .then((res) => {
                 setProduct(res);
             })
-            .catch((err) => console.log(err))
-            .finally(() => console.log("Fin llamada Api"));
+            .catch((err) => console.log(err));
+        // .finally(() => console.log("Fin llamada Api"));
     }, []);
 
     return (
