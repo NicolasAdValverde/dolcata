@@ -75,5 +75,4 @@ export const getFetch = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve(products);
     }, 2000);
-    reject((err) => console.log(err));
 });
