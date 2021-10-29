@@ -129,10 +129,19 @@ h1 {
 
 .contain-cards {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.contain-image-card {
+    width: 100%;
+}
+
+.contain-image-card img {
+    width: 10rem;
 }
 
 .cards {
@@ -142,6 +151,7 @@ h1 {
     margin: 3rem 3rem;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .button-card {
@@ -158,4 +168,5 @@ h1 {
     border: 1px solid black;
     margin: 2rem 10rem;
     padding: 2rem 0;
+    text-align: center;
 }

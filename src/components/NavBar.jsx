@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 import logo from "../components/images/logo.png";
 import dolcata from "../components/images/dolcata.png";
@@ -15,9 +16,10 @@ function NavBar({ bienvenida, titulo, link1, link2, link3 }) {
                 <nav>
                     <ul>
                         <li>
-                            <a href="https://google.com">{link1}</a>
-                            <a href="https://google.com">{link2}</a>
-                            <a href="https://google.com">{link3}</a>
+                            <Link to="/">{link1}</Link>
+                            <Link to="/productos">{link2}</Link>
+
+                            <Link to="/contacto">{link3}</Link>
                         </li>
                         <li>
                             <a className="cartLogo" href="https://google.com">
