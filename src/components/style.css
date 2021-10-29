@@ -63,30 +63,64 @@ html {
     height: 5rem;
 }
 
-.NavBar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
+/* NavBar2 */
+
+.navegacion {
+    width: 80rem;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0);
 }
 
-.NavBar a {
+.navegacion ul {
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a {
+    display: block;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 0.3rem 0.7rem;
     color: #fff;
     background-color: var(--color-uno);
     border-color: var(--color-uno);
-    font-size: 1.5rem;
-    text-decoration: none;
     margin-right: 3rem;
-    border: 0.1rem solid var(--color-uno);
-    border-radius: 20px;
-    padding: 0.3rem 0.7rem;
 }
 
-.NavBar a:hover {
-    background-color: var(--color-dos);
+.menu > li > a:hover {
+    color: #4c0404;
+    transition: all 0.3s;
     color: #fff;
-    transition: 0.8s;
+    background-color: var(--color-dos);
+}
+
+/* submenu */
+
+.submenu {
+    position: absolute;
+    background-color: #904c1b00;
+    width: 120%;
+    padding: 0.3rem 0.7rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.submenu > li > a {
+    display: block;
+    padding: 0.8rem;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+}
+
+li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
 }
 
 .titulo {
@@ -120,9 +154,17 @@ h1 {
     background-color: transparent;
 }
 
-.cartLogo img {
-    width: 5rem;
+.menu > li > .cartLogo {
+    background-color: transparent;
     padding-top: 0.5rem;
+}
+
+.menu > li > .cartLogo:hover {
+    background-color: transparent;
+}
+
+.cartLogo img {
+    width: 3rem;
 }
 
 /* cards */
