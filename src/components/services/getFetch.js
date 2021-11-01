@@ -144,14 +144,6 @@ const products = [
     },
     {
         id: 19,
-        title: "Filtro Doble Descartable",
-        stock: 10,
-        photo: "./assets/images/filtros1.png",
-        price: 150,
-        categoria: "filtros",
-    },
-    {
-        id: 19,
         title: "Filtro Simple",
         stock: 10,
         photo: "./assets/images/filtros2.png",
@@ -160,7 +152,7 @@ const products = [
     },
     {
         id: 20,
-        title: "Filtro Doble Reutilizable",
+        title: "Filtro Doble ",
         stock: 10,
         photo: "./assets/images/filtros3.png",
         price: 400,
@@ -439,7 +431,7 @@ const products = [
         categoria: "vasos",
     },
     {
-        id: 48,
+        id: 55,
         title: "Vaso Termico Stanley",
         stock: 10,
         photo: "./assets/images/VasoTermico4.png",

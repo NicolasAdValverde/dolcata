@@ -16,11 +16,15 @@ function App() {
                         titulo="DOLCATA"
                     />
                 </Route>
-                <Route exact path="/productos">
+                <Route exact path="/">
                     <NavBar />
                     <ItemListContainer />
                 </Route>
-                <Route exact path="/contacto">
+                <Route exact path="/productos/:id">
+                    <NavBar />
+                    <ItemListContainer />
+                </Route>
+                <Route exact path="/detalle">
                     <NavBar />
                     <ItemDetailContainer />
                 </Route>

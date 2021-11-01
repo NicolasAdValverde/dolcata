@@ -21,19 +21,34 @@ export const NavBar = () => {
                         <Link to="/productos">Productos</Link>{" "}
                         <ul className="submenu">
                             <li>
-                                <Link to="/id"> Café en capsulas</Link>
+                                <Link to="/productos/capsulas">
+                                    {" "}
+                                    Café en capsulas
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/id"> Café en granos</Link>
+                                <Link to="/productos/granos">
+                                    {" "}
+                                    Café en granos
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/id"> Filtros</Link>
+                                <Link to="/productos/filtros"> Filtros</Link>
                             </li>
                             <li>
-                                <Link to="/id"> Vasos Termicos</Link>
+                                <Link to="/productos/vasos">
+                                    {" "}
+                                    Vasos Termicos
+                                </Link>
                             </li>
                             <li>
-                                <Link to="/id"> Cafeteras</Link>
+                                <Link to="/productos/cafeteras">
+                                    {" "}
+                                    Cafeteras
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/productos/tazas"> Tazas</Link>
                             </li>
                         </ul>
                     </li>
