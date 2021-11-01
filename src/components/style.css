@@ -33,7 +33,7 @@ html {
     flex-direction: column;
 }
 
-/* NavBar */
+/* Home Presentacion */
 
 .presentacion {
     height: 100vh;
@@ -50,6 +50,7 @@ html {
     align-items: center;
     justify-content: space-between;
 }
+/* NavBar */
 
 .NavBar-div {
     margin: 2rem 5rem;
@@ -63,11 +64,7 @@ html {
     height: 5rem;
 }
 
-/* NavBar2 */
-
 .navegacion {
-    width: 80rem;
-    margin: 2rem auto;
     background: rgba(255, 255, 255, 0);
 }
 
@@ -102,9 +99,11 @@ html {
 
 .submenu {
     position: absolute;
-    background-color: #904c1b00;
-    width: 120%;
-    padding: 0.3rem 0.7rem;
+    background-color: var(--color-uno);
+
+    width: 70%;
+    border-radius: 5%;
+    margin-top: 0.2rem;
     visibility: hidden;
     opacity: 0;
     transition: opacity 1.5s;
@@ -113,9 +112,14 @@ html {
 .submenu > li > a {
     display: block;
     padding: 0.8rem;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 0.7rem;
     text-decoration: none;
     text-align: center;
+}
+
+.submenu > li > a:hover {
+    background-color: var(--color-dos);
 }
 
 li:hover .submenu {
