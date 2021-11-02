@@ -1,4 +1,4 @@
-const products = [
+const productsDetail = [
     {
         id: 1,
         title: "Cafe Negro",
@@ -6,6 +6,7 @@ const products = [
         photo: "./assets/images/CafeNegro.png",
         price: 250,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 2,
@@ -13,6 +14,8 @@ const products = [
         stock: 10,
         photo: "./assets/images/CafeAzul.png",
         price: 180,
+        categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 3,
@@ -21,6 +24,7 @@ const products = [
         photo: "./assets/images/CafeRojo.png",
         price: 180,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 4,
@@ -29,6 +33,7 @@ const products = [
         photo: "./assets/images/CafeVerde.png",
         price: 180,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 5,
@@ -37,6 +42,7 @@ const products = [
         photo: "./assets/images/CafeNaranja.png",
         price: 200,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 6,
@@ -45,6 +51,7 @@ const products = [
         photo: "./assets/images/CafeDorado.png",
         price: 350,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 7,
@@ -53,6 +60,7 @@ const products = [
         photo: "../assets/images/CafeRosa.png",
         price: 200,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 8,
@@ -61,6 +69,7 @@ const products = [
         photo: "./assets/images/CafeMarron.png",
         price: 100,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 9,
@@ -69,6 +78,7 @@ const products = [
         photo: "./assets/images/CafeBlanco.png",
         price: 250,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 10,
@@ -77,6 +87,7 @@ const products = [
         photo: "./assets/images/CafeVioleta.png",
         price: 200,
         categoria: "capsulas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 11,
@@ -85,6 +96,7 @@ const products = [
         photo: "./assets/images/cafetera.png",
         price: 4500,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 12,
@@ -93,6 +105,7 @@ const products = [
         photo: "./assets/images/cafetera2.png",
         price: 1500,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 13,
@@ -101,6 +114,7 @@ const products = [
         photo: "./assets/images/cafetera3.png",
         price: 1000,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 14,
@@ -109,6 +123,7 @@ const products = [
         photo: "./assets/images/cafetera4.png",
         price: 2500,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 15,
@@ -117,6 +132,7 @@ const products = [
         photo: "./assets/images/cafetera5.png",
         price: 2800,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 16,
@@ -125,6 +141,7 @@ const products = [
         photo: "./assets/images/cafetera6.png",
         price: 5000,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 17,
@@ -133,6 +150,7 @@ const products = [
         photo: "./assets/images/cafetera7.png",
         price: 7000,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 18,
@@ -141,6 +159,7 @@ const products = [
         photo: "./assets/images/cafetera8.jpg",
         price: 4000,
         categoria: "cafeteras",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 19,
@@ -149,6 +168,7 @@ const products = [
         photo: "./assets/images/filtros2.png",
         price: 50,
         categoria: "filtros",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 20,
@@ -157,6 +177,7 @@ const products = [
         photo: "./assets/images/filtros3.png",
         price: 400,
         categoria: "filtros",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 21,
@@ -165,6 +186,7 @@ const products = [
         photo: "./assets/images/granos1.png",
         price: 700,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 22,
@@ -173,6 +195,7 @@ const products = [
         photo: "./assets/images/granos2.png",
         price: 1400,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 23,
@@ -181,6 +204,7 @@ const products = [
         photo: "./assets/images/granos3.png",
         price: 900,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 24,
@@ -189,6 +213,7 @@ const products = [
         photo: "./assets/images/granos4.png",
         price: 2400,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 25,
@@ -197,6 +222,7 @@ const products = [
         photo: "./assets/images/granos5.png",
         price: 1000,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 26,
@@ -205,6 +231,7 @@ const products = [
         photo: "./assets/images/granos6.png",
         price: 1800,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 27,
@@ -213,6 +240,7 @@ const products = [
         photo: "./assets/images/granos7.png",
         price: 650,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 28,
@@ -221,6 +249,7 @@ const products = [
         photo: "./assets/images/granos8.png",
         price: 3400,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 29,
@@ -229,6 +258,7 @@ const products = [
         photo: "./assets/images/granos9.png",
         price: 5400,
         categoria: "granos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 30,
@@ -237,6 +267,7 @@ const products = [
         photo: "./assets/images/taza.png",
         price: 1500,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 31,
@@ -245,6 +276,7 @@ const products = [
         photo: "./assets/images/taza2.png",
         price: 800,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 32,
@@ -253,6 +285,7 @@ const products = [
         photo: "./assets/images/taza3.png",
         price: 1500,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 33,
@@ -261,6 +294,7 @@ const products = [
         photo: "./assets/images/taza4.png",
         price: 1100,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 34,
@@ -269,6 +303,7 @@ const products = [
         photo: "./assets/images/taza5.png",
         price: 800,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 35,
@@ -277,6 +312,7 @@ const products = [
         photo: "./assets/images/taza6.png",
         price: 1000,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 36,
@@ -285,6 +321,7 @@ const products = [
         photo: "./assets/images/taza7.png",
         price: 900,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 37,
@@ -293,6 +330,7 @@ const products = [
         photo: "./assets/images/taza8.png",
         price: 1900,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 38,
@@ -301,6 +339,7 @@ const products = [
         photo: "./assets/images/taza9.png",
         price: 1500,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 39,
@@ -309,6 +348,7 @@ const products = [
         photo: "./assets/images/taza10.png",
         price: 1300,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 40,
@@ -317,6 +357,7 @@ const products = [
         photo: "./assets/images/taza11.png",
         price: 1300,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 41,
@@ -325,6 +366,7 @@ const products = [
         photo: "./assets/images/taza12.png",
         price: 2000,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 42,
@@ -333,6 +375,7 @@ const products = [
         photo: "./assets/images/taza13.png",
         price: 2500,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 43,
@@ -341,6 +384,7 @@ const products = [
         photo: "./assets/images/taza14.png",
         price: 2000,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 44,
@@ -349,6 +393,7 @@ const products = [
         photo: "./assets/images/taza15.png",
         price: 1500,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 45,
@@ -357,6 +402,7 @@ const products = [
         photo: "./assets/images/taza16.png",
         price: 1800,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 46,
@@ -365,6 +411,7 @@ const products = [
         photo: "./assets/images/taza17.png",
         price: 1800,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 47,
@@ -373,6 +420,7 @@ const products = [
         photo: "./assets/images/taza18.png",
         price: 900,
         categoria: "tazas",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 48,
@@ -381,6 +429,7 @@ const products = [
         photo: "./assets/images/VasoTermico.png",
         price: 2900,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 49,
@@ -389,6 +438,7 @@ const products = [
         photo: "./assets/images/VasoTermico2.png",
         price: 1900,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 50,
@@ -397,6 +447,7 @@ const products = [
         photo: "./assets/images/VasoTermico3.png",
         price: 2500,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 51,
@@ -405,6 +456,7 @@ const products = [
         photo: "./assets/images/VasoTermico5.png",
         price: 1400,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 52,
@@ -413,6 +465,7 @@ const products = [
         photo: "./assets/images/VasoTermico5.png",
         price: 1700,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 53,
@@ -421,6 +474,7 @@ const products = [
         photo: "./assets/images/VasoTermico6.png",
         price: 2200,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 54,
@@ -429,6 +483,7 @@ const products = [
         photo: "./assets/images/VasoTermico8.png",
         price: 1000,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
     {
         id: 55,
@@ -437,11 +492,12 @@ const products = [
         photo: "./assets/images/VasoTermico4.png",
         price: 5900,
         categoria: "vasos",
+        desc: "Aca va la descripcion del producto.....",
     },
 ];
 
-export const getFetch = new Promise((resolve, reject) => {
+export const getFetchDetail = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve(products);
+        resolve(productsDetail);
     }, 2000);
 });

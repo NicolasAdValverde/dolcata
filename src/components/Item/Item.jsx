@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Item = ({ prod }) => {
     return (
         <div className="cards">
@@ -6,7 +8,9 @@ export const Item = ({ prod }) => {
                 <img src={prod.photo} alt="cafe dolcata" />
             </div>
             <h4>Precio: ${prod.price}</h4>
-            <button className="button-card">Detalles del producto</button>
+            <Link to={`/producto/${prod.id}`}>
+                <button className="button-card">Detalles del producto</button>{" "}
+            </Link>
             <span>Stock disponible: {prod.stock}</span>
         </div>
     );

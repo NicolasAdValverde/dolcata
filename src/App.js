@@ -16,7 +16,7 @@ function App() {
                         titulo="DOLCATA"
                     />
                 </Route>
-                <Route exact path="/">
+                <Route exact path="/productos">
                     <NavBar />
                     <ItemListContainer />
                 </Route>
@@ -24,7 +24,7 @@ function App() {
                     <NavBar />
                     <ItemListContainer />
                 </Route>
-                <Route exact path="/detalle">
+                <Route exact path="/producto/:prodId">
                     <NavBar />
                     <ItemDetailContainer />
                 </Route>

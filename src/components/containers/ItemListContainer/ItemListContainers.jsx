@@ -9,7 +9,7 @@ export function ItemListContainer() {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const id = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
         if (id) {
@@ -28,6 +28,8 @@ export function ItemListContainer() {
                 .finally(() => setLoading(false));
         }
     }, [id]);
+
+    console.log(product);
 
     return <div>{loading ? <Loader /> : <ItemList product={product} />}</div>;
 }
