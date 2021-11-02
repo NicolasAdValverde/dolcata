@@ -29,7 +29,5 @@ export function ItemListContainer() {
         }
     }, [id]);
 
-    console.log(product);
-
     return <div>{loading ? <Loader /> : <ItemList product={product} />}</div>;
 }

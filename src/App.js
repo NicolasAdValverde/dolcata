@@ -5,6 +5,7 @@ import { ItemDetailContainer } from "../src/components/containers/ItemdetailCont
 import { ItemListContainer } from "./components/containers/ItemListContainer/ItemListContainers";
 import HomePresentacion from "./components/HomePresentacion";
 import { NavBar } from "./components/NavBar/NavBar";
+import { Contacto } from "./components/Contacto/Contacto";
 
 function App() {
     return (
@@ -27,6 +28,10 @@ function App() {
                 <Route exact path="/producto/:prodId">
                     <NavBar />
                     <ItemDetailContainer />
+                </Route>
+                <Route exact path="/contacto">
+                    <NavBar />
+                    <Contacto />
                 </Route>
             </Switch>
         </BrowserRouter>

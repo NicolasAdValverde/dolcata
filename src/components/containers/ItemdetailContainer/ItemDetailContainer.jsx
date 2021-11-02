@@ -14,7 +14,7 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         getFetchDetail
             .then((res) => {
-                setDetail(res.find((prod) => prod.id === prodId));
+                setDetail(res.find((prod) => prod.id === parseInt(prodId)));
             })
             .catch((err) => console.log(err))
             .finally(() => setLoading(false));
