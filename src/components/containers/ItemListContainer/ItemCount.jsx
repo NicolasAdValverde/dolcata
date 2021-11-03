@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export function ItemCount({ stock, initial }) {
+export function ItemCount({ stock, initial, onAdd }) {
     let [count, setCount] = useState(initial);
+    const [cambiarBoton, setCambiarBoton] = useState(false);
 
     function sumarProducto() {
         setCount(count + 1);
@@ -11,7 +13,10 @@ export function ItemCount({ stock, initial }) {
         setCount(count - 1);
     }
 
-    function onAdd() {
+    function HandleronAdd() {
+        onAdd(count);
+        setCount(initial);
+        setCambiarBoton(true);
         console.log(`Agregaste ${count} producto(s) a tu carrito`);
     }
 
@@ -25,7 +30,14 @@ export function ItemCount({ stock, initial }) {
             <button onClick={restarProducto} disabled={count < 1}>
                 -
             </button>
-            <button onClick={onAdd}>Agregar al carrito</button>
+
+            {cambiarBoton ? (
+                <Link to="/cart">
+                    <button>Terminar Compra</button>
+                </Link>
+            ) : (
+                <button onClick={HandleronAdd}>Agregar al carrito</button>
+            )}
         </div>
     );
 }

@@ -6,6 +6,7 @@ import { ItemListContainer } from "./components/containers/ItemListContainer/Ite
 import HomePresentacion from "./components/HomePresentacion";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Contacto } from "./components/Contacto/Contacto";
+import { Cart } from "./components/Cart/Cart";
 
 function App() {
     return (
@@ -32,6 +33,10 @@ function App() {
                 <Route exact path="/contacto">
                     <NavBar />
                     <Contacto />
+                </Route>
+                <Route>
+                    <NavBar />
+                    <Cart />
                 </Route>
             </Switch>
         </BrowserRouter>
