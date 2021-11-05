@@ -19,23 +19,18 @@ function App() {
                     />
                 </Route>
                 <Route exact path="/productos">
-                    <NavBar />
                     <ItemListContainer />
                 </Route>
                 <Route exact path="/productos/:id">
-                    <NavBar />
                     <ItemListContainer />
                 </Route>
                 <Route exact path="/producto/:prodId">
-                    <NavBar />
                     <ItemDetailContainer />
                 </Route>
                 <Route exact path="/contacto">
-                    <NavBar />
                     <Contacto />
                 </Route>
                 <Route>
-                    <NavBar />
                     <Cart />
                 </Route>
             </Switch>

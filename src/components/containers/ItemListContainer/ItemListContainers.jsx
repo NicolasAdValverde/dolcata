@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getFetch } from "../../services/getFetch.js";
 import { ItemList } from "../../ItemList/ItemList";
 import { Loader } from "../../Loader.jsx";
+import { NavBar } from "../../NavBar/NavBar.jsx";
 
 export function ItemListContainer() {
     const [product, setProduct] = useState([]);
@@ -29,5 +30,10 @@ export function ItemListContainer() {
         }
     }, [id]);
 
-    return <div>{loading ? <Loader /> : <ItemList product={product} />}</div>;
+    return (
+        <div>
+            <NavBar />
+            {loading ? <Loader /> : <ItemList product={product} />}
+        </div>
+    );
 }

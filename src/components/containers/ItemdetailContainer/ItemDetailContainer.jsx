@@ -4,6 +4,7 @@ import { ItemDetail } from "../../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader";
 import { getFetchDetail } from "../../services/getFetchDetail";
+import { NavBar } from "../../NavBar/NavBar";
 
 export const ItemDetailContainer = () => {
     const [detail, setDetail] = useState([]);
@@ -20,5 +21,10 @@ export const ItemDetailContainer = () => {
             .finally(() => setLoading(false));
     }, [prodId]);
 
-    return <>{loading ? <Loader /> : <ItemDetail detail={detail} />}</>;
+    return (
+        <>
+            <NavBar />
+            {loading ? <Loader /> : <ItemDetail detail={detail} />}
+        </>
+    );
 };
