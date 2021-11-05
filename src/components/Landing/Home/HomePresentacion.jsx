@@ -1,6 +1,6 @@
 import React from "react";
-import { NavBar } from "./NavBar/NavBar";
-import "./style.css";
+import { NavBar } from "../../NavBar/NavBar";
+import "../../../components/style.css";
 
 function HomePresentacion({ bienvenida, titulo }) {
     return (

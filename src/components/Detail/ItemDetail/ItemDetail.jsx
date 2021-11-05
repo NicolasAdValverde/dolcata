@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemCount } from "../containers/ItemListContainer/ItemCount";
+import { ItemCount } from "../../Items/ItemListContainer/ItemCount";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

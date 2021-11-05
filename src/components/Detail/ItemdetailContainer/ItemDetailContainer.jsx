@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { ItemDetail } from "../../ItemDetail/ItemDetail";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { Loader } from "../../Loader";
+import { Loader } from "../../Loader/Loader";
 import { getFetchDetail } from "../../services/getFetchDetail";
 import { NavBar } from "../../NavBar/NavBar";
 

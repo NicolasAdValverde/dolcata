@@ -2,8 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getFetch } from "../../services/getFetch.js";
-import { ItemList } from "../../ItemList/ItemList";
-import { Loader } from "../../Loader.jsx";
+import { ItemList } from "../ItemList/ItemList";
+import { Loader } from "../../Loader/Loader.jsx";
 import { NavBar } from "../../NavBar/NavBar.jsx";
 
 export function ItemListContainer() {

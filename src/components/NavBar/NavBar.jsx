@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CartIconLogo } from "../CartWidget";
+import { CartIconLogo } from "./CartWidgest/CartWidget";
 import logo from "../../components/images/logo.png";
 
 export const NavBar = () => {
     return (
         <div className="NavBar">
             <div className="NavBar-div">
-                <img className="logo" src={logo} alt="logo" />
+                <Link to="/">
+                    {" "}
+                    <img className="logo" src={logo} alt="logo" />{" "}
+                </Link>
             </div>
             <nav className="navegacion">
                 <ul className="menu">
