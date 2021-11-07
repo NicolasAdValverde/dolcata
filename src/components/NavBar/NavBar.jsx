@@ -60,11 +60,7 @@ export const NavBar = () => {
                     </li>
 
                     <li>
-                        <Link
-                            to="/cart"
-                            className="Link cartLogo"
-                            href="https://google.com"
-                        >
+                        <Link to="/cart" className="Link cartLogo">
                             <CartIconLogo />
                         </Link>
                     </li>

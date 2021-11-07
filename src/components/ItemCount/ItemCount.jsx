@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
 export function ItemCount({ stock, initial, onAdd }) {
     let [count, setCount] = useState(initial);
-    const [cambiarBoton, setCambiarBoton] = useState(false);
 
     function sumarProducto() {
         setCount(count + 1);
@@ -11,13 +8,6 @@ export function ItemCount({ stock, initial, onAdd }) {
 
     function restarProducto() {
         setCount(count - 1);
-    }
-
-    function HandleronAdd() {
-        onAdd(count);
-        setCount(initial);
-        setCambiarBoton(true);
-        console.log(`Agregaste ${count} producto(s) a tu carrito`);
     }
 
     return (
@@ -30,14 +20,19 @@ export function ItemCount({ stock, initial, onAdd }) {
             <button onClick={restarProducto} disabled={count < 1}>
                 -
             </button>
-
-            {cambiarBoton ? (
-                <Link to="/cart">
-                    <button>Terminar Compra</button>
-                </Link>
-            ) : (
-                <button onClick={HandleronAdd}>Agregar al carrito</button>
-            )}
+            <button
+                onClick={() =>
+                    onAdd(
+                        count,
+                        console.log(
+                            "capturo la cantidad en ItemCount y la llevo para mostrarla en itemDetail"
+                        )
+                    )
+                }
+            >
+                Agregar al carrito
+            </button>
+            {/* La funcion onAdd con el count (estado) me captura la cantidad seleccionada, pero se mostrara en consola en itemDetail*/}
         </div>
     );
 }

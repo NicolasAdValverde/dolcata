@@ -6,9 +6,11 @@ import { ItemListContainer } from "./components/Items/ItemListContainer/ItemList
 import HomePresentacion from "./components/Landing/Home/HomePresentacion";
 import { Contacto } from "./components/Landing/Contacto/Contacto";
 import { Cart } from "./components/Detail/Cart/Cart";
+import CartContextProvider from "./components/Contexts/CartContext";
 
 function App() {
     return (
+        // <CartContextProvider>
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
@@ -20,20 +22,25 @@ function App() {
                 <Route exact path="/productos">
                     <ItemListContainer />
                 </Route>
+
                 <Route exact path="/productos/:id">
                     <ItemListContainer />
                 </Route>
+
                 <Route exact path="/producto/:prodId">
                     <ItemDetailContainer />
                 </Route>
+
                 <Route exact path="/contacto">
                     <Contacto />
                 </Route>
-                <Route>
+
+                <Route exact path="/cart">
                     <Cart />
                 </Route>
             </Switch>
         </BrowserRouter>
+        // </CartContextProvider>
     );
 }
 
