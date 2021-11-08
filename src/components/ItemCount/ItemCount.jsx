@@ -1,29 +1,32 @@
 import { useState } from "react";
-export function ItemCount({ stock, initial, onAdd }) {
+export function ItemCount({ stock, initial, addToCart }) {
     let [count, setCount] = useState(initial);
 
-    function sumarProducto() {
+    function increaseQty() {
         setCount(count + 1);
     }
 
-    function restarProducto() {
+    function decreaseQty() {
         setCount(count - 1);
     }
+
+    const addToCartHandler = () => {
+        addToCart(count);
+    };
 
     return (
         <div className="centrar">
             <h4>Stock: {stock} </h4>
             <h3>Cantidad de productos a seleccionar : {count} </h3>
-            <button onClick={sumarProducto} disabled={count === stock}>
+            <button onClick={increaseQty} disabled={count === stock}>
                 +
             </button>
-            <button onClick={restarProducto} disabled={count < 1}>
+            <button onClick={decreaseQty} disabled={count < 1}>
                 -
             </button>
             <button
                 onClick={() =>
-                    onAdd(
-                        count,
+                    addToCartHandler(
                         console.log(
                             "capturo la cantidad en ItemCount y la llevo para mostrarla en itemDetail"
                         )

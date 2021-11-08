@@ -1,23 +1,51 @@
-// import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext } from "react";
 
-// const CartContext = createContext();
+const CartContext = createContext();
 
-// export const useCartContext = () => {
-//     useContext(CartContext);
-// };
+export const useCartContext = () => {
+    return useContext(CartContext);
+};
 
-// const CartContextProvider = ({ children }) => {
-//     // const [cartList, setCartList] = useState([]);
+const CartContextProvider = ({ children }) => {
+    const [cartList, setCartList] = useState([]);
+    // Estado interno del cartContextProvider
 
-//     return (
-//         <CartContext.Provider
-//             value={
-//                 {
+    const addToCartList = (itemAdded) => {
+        const findItem = cartList.find(
+            (itemInCart) => itemInCart.detail.id === itemAdded.detail.id
+        );
+        if (findItem) {
+            findItem.quantity = findItem.quantity + itemAdded.quantity;
+            setCartList(cartList);
+        } else {
+            setCartList((previousItems) => [...previousItems, itemAdded]);
+        }
+    };
 
-//                 }
-//             }
-//         >
-//             {children}
-//         </CartContext.Provider>
-//     );
-// };
+    const removeItem = (idItemToRemove) => {
+        setCartList(
+            cartList.filter(
+                (itemSearched) => itemSearched.detail.id !== idItemToRemove
+            )
+        );
+    };
+
+    const clearCart = () => {
+        setCartList([]);
+    };
+
+    return (
+        <CartContext.Provider
+            value={{
+                cartList,
+                addToCartList,
+                clearCart,
+                removeItem,
+            }}
+        >
+            {children}
+        </CartContext.Provider>
+    );
+};
+
+export default CartContextProvider;
