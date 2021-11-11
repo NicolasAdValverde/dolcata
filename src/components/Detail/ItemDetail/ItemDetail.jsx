@@ -42,9 +42,6 @@ export const ItemDetail = ({ detail }) => {
                     <Link to="/">
                         <button>Inicio</button>
                     </Link>
-                    <Link to="/productos">
-                        <button>Seguir comprando</button>
-                    </Link>
                 </div>
             ) : (
                 <ItemCount

@@ -16,6 +16,10 @@
 
 ## Dependencias extra
 
+###### _firebase: 8.9.1_
+
+###### _Se utilizó firebase como base de datos_
+
 ###### _React-Dom version: 17.0.2_
 
 ###### _React-Router-Dom version: 5.3.0_

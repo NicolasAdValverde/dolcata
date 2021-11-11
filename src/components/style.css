@@ -216,3 +216,27 @@ h1 {
     padding: 2rem 0;
     text-align: center;
 }
+
+/* Cart */
+
+/* Table  */
+
+.table {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table-header {
+    background-color: var(--color-siete);
+    border: 1px solid #4c0404;
+    width: 1000px;
+}
+
+.table-th {
+    width: 200px;
+}
+
+.black {
+    color: black;
+}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { NavBar } from "../../NavBar/NavBar";
 
 export const Cart = () => {
-    const { cartList, removeItem, clearCart } = useCartContext();
+    const { cartList, removeItem, clearCart, totalPrice } = useCartContext();
     // destructuring de las funciones cartList, removeItem, clearCart del context
 
     console.log(cartList, "cartList desde cart");
@@ -15,34 +15,85 @@ export const Cart = () => {
             <p className="App">carrito</p>
 
             {cartList.length ? (
-                <div>
-                    <button onClick={() => clearCart()}>Vaciar carrito</button>
-                    <button>Pagar</button>
-                </div>
+                <>
+                    <div className="table">
+                        <table className="table-header">
+                            <tr>
+                                <th scope="row" className="table-th">
+                                    Producto
+                                </th>
+                                <th className="table-th">Cantidad</th>
+                                <th scope="row" className="table-th">
+                                    Precio unitario
+                                </th>
+                                <th className="table-th">Subtotal</th>
+                                <th className="table-th App">-</th>
+                            </tr>
+                        </table>
+                        {cartList.map((itemAdded) => (
+                            <table
+                                key={itemAdded.detail.id}
+                                className="table-header"
+                            >
+                                <tr>
+                                    <td className="table-th App">
+                                        {itemAdded.detail.title}
+                                    </td>
+                                    <td className="table-th App">
+                                        {itemAdded.quantity}
+                                    </td>
+                                    <td className="table-th App">
+                                        {itemAdded.detail.price}
+                                    </td>
+                                    <td className="table-th App">Subtotal</td>
+                                    <td className="table-th App">
+                                        {" "}
+                                        <button
+                                            onClick={() =>
+                                                removeItem(itemAdded.detail.id)
+                                            }
+                                            className="App"
+                                        >
+                                            {" "}
+                                            Remover
+                                        </button>{" "}
+                                    </td>
+                                </tr>
+                            </table>
+                        ))}
+                        <table className="table-header">
+                            <tr>
+                                <th scope="row" className="table-th">
+                                    <button onClick={() => clearCart()}>
+                                        Vaciar carrito
+                                    </button>
+                                </th>
+                                <th className="table-th">
+                                    <Link to="/productos">
+                                        <button>
+                                            ¿Sumar algun producto mas?
+                                        </button>
+                                    </Link>
+                                </th>
+                                <th scope="row" className="table-th">
+                                    <button>Pagar</button>
+                                </th>
+                                <th className="table-th">
+                                    Total: ${totalPrice}
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </>
             ) : (
-                <div>
+                <div className="App">
                     <p>El carrito está vacío</p>
-                    <Link to="/"> Ir al inicio</Link>
+                    <Link to="/productos">
+                        {" "}
+                        <button>Encontrá aca lo que buscas!</button>{" "}
+                    </Link>
                 </div>
             )}
-            {cartList.map((itemAdded) => (
-                <div key={itemAdded.detail.id}>
-                    <img
-                        src={itemAdded.detail.img}
-                        alt={itemAdded.detail.title}
-                    />
-                    <div>
-                        <h5>{itemAdded.detail.title}</h5>
-
-                        <p>{itemAdded.detail.desc}</p>
-                        <p>$ {itemAdded.detail.price}</p>
-                        <p>Cantidad: {itemAdded.quantity}</p>
-                    </div>
-                    <button onClick={() => removeItem(itemAdded.detail.id)}>
-                        Eliminar producto
-                    </button>
-                </div>
-            ))}
         </div>
     );
 };
