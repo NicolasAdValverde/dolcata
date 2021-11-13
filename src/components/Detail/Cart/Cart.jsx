@@ -12,22 +12,22 @@ export const Cart = () => {
     return (
         <div>
             <NavBar />
-            <p className="App">carrito</p>
+            <p className="App title-carrito">Carrito de compras</p>
 
             {cartList.length ? (
                 <>
                     <div className="table">
                         <table className="table-header">
                             <tr>
-                                <th scope="row" className="table-th">
+                                <th scope="row" className="table-th th-color">
                                     Producto
                                 </th>
-                                <th className="table-th">Cantidad</th>
-                                <th scope="row" className="table-th">
+                                <th className="table-th th-color">Cantidad</th>
+                                <th scope="row" className="table-th th-color">
                                     Precio unitario
                                 </th>
-                                <th className="table-th">Subtotal</th>
-                                <th className="table-th App">-</th>
+
+                                <th className="table-th App th-color">-</th>
                             </tr>
                         </table>
                         {cartList.map((itemAdded) => (
@@ -45,14 +45,14 @@ export const Cart = () => {
                                     <td className="table-th App">
                                         {itemAdded.detail.price}
                                     </td>
-                                    <td className="table-th App">Subtotal</td>
+
                                     <td className="table-th App">
                                         {" "}
                                         <button
                                             onClick={() =>
                                                 removeItem(itemAdded.detail.id)
                                             }
-                                            className="App"
+                                            className="App button-card"
                                         >
                                             {" "}
                                             Remover
@@ -64,19 +64,24 @@ export const Cart = () => {
                         <table className="table-header">
                             <tr>
                                 <th scope="row" className="table-th">
-                                    <button onClick={() => clearCart()}>
+                                    <button
+                                        className="button-card"
+                                        onClick={() => clearCart()}
+                                    >
                                         Vaciar carrito
                                     </button>
                                 </th>
                                 <th className="table-th">
                                     <Link to="/productos">
-                                        <button>
+                                        <button className="button-card">
                                             ¿Sumar algun producto mas?
                                         </button>
                                     </Link>
                                 </th>
                                 <th scope="row" className="table-th">
-                                    <button>Pagar</button>
+                                    <button className="button-card">
+                                        Check out
+                                    </button>
                                 </th>
                                 <th className="table-th">
                                     Total: ${totalPrice}
@@ -87,10 +92,12 @@ export const Cart = () => {
                 </>
             ) : (
                 <div className="App">
-                    <p>El carrito está vacío</p>
+                    <p className="Cart-empty">El carrito está vacío</p>
                     <Link to="/productos">
                         {" "}
-                        <button>Encontrá aca lo que buscas!</button>{" "}
+                        <button className="button-card-AddToCart-detail">
+                            Encontrá aca lo que buscas!
+                        </button>{" "}
                     </Link>
                 </div>
             )}

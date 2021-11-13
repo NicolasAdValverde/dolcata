@@ -17,7 +17,7 @@ html {
 /* paleta de colores */
 :root {
     --color-uno: #4c0404;
-    --color-dos: #742c0c;
+    --color-dos: #742b0c52;
     --color-tres: #ac7c4c;
     --color-cuatro: #904b1b;
     --color-cinco: #9c5c24;
@@ -28,7 +28,7 @@ html {
 /* CLASES GENERALES */
 .centrar {
     display: flex;
-    justify-content: content;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -129,21 +129,72 @@ li:hover .submenu {
 
 .titulo {
     position: absolute;
-    top: 30%;
-    left: 20%;
+    -webkit-text-stroke: 1px #fff;
+    top: 42%;
+    left: 24%;
 }
 
-.titulo small {
-    color: var(--color-dos);
-    font-size: 3rem;
+small {
+    color: var(--color-seis);
+    font-size: 4.5rem;
     font-family: "Birthstone", cursive;
+    position: absolute;
+    -webkit-text-stroke: 1px #000;
+    top: 30%;
+    left: 21%;
 }
 
 h1 {
     font-size: 6rem;
     line-height: 5rem;
+    letter-spacing: 0.8rem;
     font-family: "Lato", sans-serif;
     text-shadow: -1px 3px 24px rgba(0, 0, 0, 0.6);
+}
+
+/* TYPED JS */
+
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.typed-fade-out {
+    opacity: 0;
+    transition: opacity 0.25s;
+    -webkit-animation: 0;
+    animation: 0;
+}
+
+.typed-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+}
+
+.typed {
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: "Birthstone", cursive;
+    -webkit-text-stroke: 0.3px var(--color-uno);
 }
 
 .NavBar .cartLogo {
@@ -171,6 +222,30 @@ h1 {
     width: 3rem;
 }
 
+.black {
+    color: black;
+}
+
+.container-cartWidget {
+    display: flex;
+}
+
+.container-cartWidget p {
+    background-color: var(--color-uno);
+    color: #fff;
+    border-radius: 50%;
+    width: 2rem;
+    text-align: center;
+}
+
+/* loader */
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* cards */
 
 .contain-cards {
@@ -187,11 +262,12 @@ h1 {
 }
 
 .contain-image-card img {
-    width: 10rem;
+    width: 13rem;
+    height: 10rem;
 }
 
 .cards {
-    border: 1px solid black;
+    border: 1px solid var(--color-uno);
     border-radius: 5%;
     width: 20%;
     margin: 3rem 3rem;
@@ -200,7 +276,21 @@ h1 {
     text-align: center;
 }
 
+.cards:hover {
+    box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+    -webkit-box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+    -moz-box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+}
+
+.cards:hover .button-card {
+    background-color: var(--color-cinco);
+}
+
 .button-card {
+    background-color: var(--color-uno);
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5%;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -209,12 +299,98 @@ h1 {
 }
 
 /* CartDetail */
+.bkgc-detail {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/cafe-info4.jpg);
+    background-position: center;
+    background-size: cover;
+}
 
 .contain-cartDetail {
+    position: absolute;
+    top: 15%;
+    left: 24%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    height: 30rem;
     border: 1px solid black;
-    margin: 2rem 10rem;
-    padding: 2rem 0;
     text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.contain-cartDetail:hover {
+    box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+    -webkit-box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+    -moz-box-shadow: 0px -1px 52px 12px rgba(76, 4, 4, 0.75);
+}
+
+.contain-img-detail img {
+    width: 15rem;
+    height: 20rem;
+}
+
+.div-detail1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40rem;
+    height: 40rem;
+}
+
+.div-detail2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20rem;
+    height: 30rem;
+}
+
+.button-card-detail {
+    background-color: var(--color-uno);
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 3rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-card-detail:hover {
+    background-color: var(--color-ocho);
+}
+
+.button-card-AddToCart-detail {
+    background-color: var(--color-uno);
+    color: #fff;
+    border: 1px solid black;
+    border-radius: 5%;
+    width: 7rem;
+    height: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.button-card-AddToCart-detail:hover {
+    background-color: var(--color-ocho);
+}
+
+.price-detail {
+    margin-bottom: 1rem;
 }
 
 /* Cart */
@@ -237,6 +413,33 @@ h1 {
     width: 200px;
 }
 
-.black {
-    color: black;
+.th-color {
+    background-color: var(--color-uno);
+    color: #fff;
+}
+
+.title-carrito {
+    font-size: 100px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(./images/back.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+.Cart-empty {
+    font-size: 2rem;
+}
+
+.white {
+    color: #fff;
 }

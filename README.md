@@ -20,6 +20,10 @@
 
 ###### _Se utilizó firebase como base de datos_
 
+##### _typed.js: 2.0.12_
+
+##### _Se utilizo la libreria typed para efectos de strings._
+
 ###### _React-Dom version: 17.0.2_
 
 ###### _React-Router-Dom version: 5.3.0_

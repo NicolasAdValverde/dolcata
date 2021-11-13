@@ -4,7 +4,6 @@ import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader/Loader";
 // import { getFetchDetail } from "../../services/getFetchDetail";
-import { NavBar } from "../../NavBar/NavBar";
 import { getFirestore } from "../../services/getFirestore";
 
 export const ItemDetailContainer = () => {
@@ -34,7 +33,7 @@ export const ItemDetailContainer = () => {
 
     return (
         <>
-            <NavBar />
+            {/* <NavBar /> */}
             {loading ? <Loader /> : <ItemDetail detail={detail} />}
         </>
     );

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ItemCount } from "../../ItemCount/ItemCount";
 
-export const ItemDetail = ({ detail }) => {
+export const ItemDetail = ({ detail, AddedToCart }) => {
     const [quantity, setQuantity] = useState(0);
     // Estado interno del componente, que setea a quantity la cantidad capturada en itemCount
     const [purchaseQuantity, setPurchasequantity] = useState(false);
@@ -27,29 +27,41 @@ export const ItemDetail = ({ detail }) => {
     };
 
     return (
-        <div className="contain-cartDetail">
-            <h2>{detail.title}</h2>
-            <img src={detail.photo} alt={detail.title} />
-            <p>{detail.desc}</p>
-            <p>Cantidad seleccionada {quantity} unidad(es)</p>
-            <h3>$ {detail.price}</h3>
-            {purchaseQuantity ? (
-                <div>
-                    <Link to="/cart">
-                        {" "}
-                        <button> Finalizar compra </button>{" "}
-                    </Link>
-                    <Link to="/">
-                        <button>Inicio</button>
-                    </Link>
+        <div className="bkgc-detail">
+            <div className="contain-cartDetail">
+                <div className="div-detail1">
+                    <h2 className="white">{detail.title}</h2>
+                    <div className="contain-img-detail">
+                        <img src={detail.photo} alt={detail.title} />
+                    </div>
+                    <p className="white">{detail.desc}</p>
                 </div>
-            ) : (
-                <ItemCount
-                    stock={detail.stock}
-                    initial={quantity}
-                    addToCart={addToCart}
-                />
-            )}
+                <div className="div-detail2">
+                    <h3 className="white price-detail">
+                        Precio $ {detail.price}
+                    </h3>
+                    {purchaseQuantity ? (
+                        <div>
+                            <Link to="/cart">
+                                {" "}
+                                <button className="button-card-AddToCart-detail">
+                                    {" "}
+                                    Finalizar compra{" "}
+                                </button>{" "}
+                            </Link>
+                            <Link to="/">
+                                <button className="button-card">Inicio</button>
+                            </Link>
+                        </div>
+                    ) : (
+                        <ItemCount
+                            stock={detail.stock}
+                            initial={quantity}
+                            addToCart={addToCart}
+                        />
+                    )}
+                </div>
+            </div>
         </div>
     );
 };
