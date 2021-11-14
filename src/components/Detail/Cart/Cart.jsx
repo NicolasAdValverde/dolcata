@@ -18,75 +18,91 @@ export const Cart = () => {
                 <>
                     <div className="table">
                         <table className="table-header">
-                            <tr>
-                                <th scope="row" className="table-th th-color">
-                                    Producto
-                                </th>
-                                <th className="table-th th-color">Cantidad</th>
-                                <th scope="row" className="table-th th-color">
-                                    Precio unitario
-                                </th>
+                            <thead>
+                                <tr>
+                                    <th
+                                        scope="row"
+                                        className="table-th th-color"
+                                    >
+                                        Producto
+                                    </th>
+                                    <th className="table-th th-color">
+                                        Cantidad
+                                    </th>
+                                    <th
+                                        scope="row"
+                                        className="table-th th-color"
+                                    >
+                                        Precio unitario
+                                    </th>
 
-                                <th className="table-th App th-color">-</th>
-                            </tr>
+                                    <th className="table-th App th-color">-</th>
+                                </tr>
+                            </thead>
                         </table>
                         {cartList.map((itemAdded) => (
                             <table
                                 key={itemAdded.detail.id}
                                 className="table-header"
                             >
-                                <tr>
-                                    <td className="table-th App">
-                                        {itemAdded.detail.title}
-                                    </td>
-                                    <td className="table-th App">
-                                        {itemAdded.quantity}
-                                    </td>
-                                    <td className="table-th App">
-                                        {itemAdded.detail.price}
-                                    </td>
+                                <tbody>
+                                    <tr>
+                                        <td className="table-th App">
+                                            {itemAdded.detail.title}
+                                        </td>
+                                        <td className="table-th App">
+                                            {itemAdded.quantity}
+                                        </td>
+                                        <td className="table-th App">
+                                            {itemAdded.detail.price}
+                                        </td>
 
-                                    <td className="table-th App">
-                                        {" "}
-                                        <button
-                                            onClick={() =>
-                                                removeItem(itemAdded.detail.id)
-                                            }
-                                            className="App button-card"
-                                        >
+                                        <td className="table-th App">
                                             {" "}
-                                            Remover
-                                        </button>{" "}
-                                    </td>
-                                </tr>
+                                            <button
+                                                onClick={() =>
+                                                    removeItem(
+                                                        itemAdded.detail.id
+                                                    )
+                                                }
+                                                className="App button-card"
+                                            >
+                                                {" "}
+                                                Remover
+                                            </button>{" "}
+                                        </td>
+                                    </tr>
+                                </tbody>
                             </table>
                         ))}
                         <table className="table-header">
-                            <tr>
-                                <th scope="row" className="table-th">
-                                    <button
-                                        className="button-card"
-                                        onClick={() => clearCart()}
-                                    >
-                                        Vaciar carrito
-                                    </button>
-                                </th>
-                                <th className="table-th">
-                                    <Link to="/productos">
-                                        <button className="button-card">
-                                            ¿Sumar algun producto mas?
+                            <tfoot>
+                                <tr>
+                                    <th scope="row" className="table-th">
+                                        <button
+                                            className="button-card"
+                                            onClick={() => clearCart()}
+                                        >
+                                            Vaciar carrito
                                         </button>
-                                    </Link>
-                                </th>
-                                <th scope="row" className="table-th">
-                                    <button className="button-card">
-                                        Check out
-                                    </button>
-                                </th>
-                                <th className="table-th">
-                                    Total: ${totalPrice}
-                                </th>
-                            </tr>
+                                    </th>
+                                    <th className="table-th">
+                                        <Link to="/productos">
+                                            <button className="button-card">
+                                                ¿Sumar algun producto mas?
+                                            </button>
+                                        </Link>
+                                    </th>
+                                    <th scope="row" className="table-th">
+                                        <button className="button-card">
+                                            Check out
+                                        </button>
+                                    </th>
+                                    <th className="table-th">
+                                        Total: ${totalPrice}
+                                    </th>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </>
