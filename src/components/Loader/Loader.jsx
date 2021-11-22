@@ -1,13 +1,10 @@
 import React from "react";
+import logo from "../images/logo.png";
 
 export const Loader = () => {
     return (
         <div className="loader">
-            {/* <h2> Cargando productos...</h2> */}
-            <img
-                src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif"
-                alt="Loader"
-            />
+            <img className="logo-loader" src={logo} alt="logo" />
         </div>
     );
 };

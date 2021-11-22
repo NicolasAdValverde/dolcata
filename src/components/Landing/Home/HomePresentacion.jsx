@@ -28,18 +28,20 @@ function HomePresentacion({ bienvenida, titulo }) {
     }, []);
 
     return (
-        <div className="presentacion">
-            <NavBar />
-            <small className="subtitulo"> {bienvenida}</small>
-            <div className="titulo">
-                <h1> {titulo}</h1>
-            </div>
-            <div className="typed-container">
-                <span
-                    className="typed"
-                    style={{ whiteSpace: "pre" }}
-                    ref={el}
-                />
+        <div>
+            <div className="presentacion">
+                <NavBar />
+                <small className="subtitulo"> {bienvenida}</small>
+                <div className="titulo">
+                    <h1> {titulo}</h1>
+                </div>
+                <div className="typed-container">
+                    <span
+                        className="typed"
+                        style={{ whiteSpace: "pre" }}
+                        ref={el}
+                    />
+                </div>
             </div>
         </div>
     );

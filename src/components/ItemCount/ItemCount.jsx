@@ -14,7 +14,6 @@ export function ItemCount({ stock, initial, addToCart }) {
 
     const addToCartHandler = () => {
         addToCart(count);
-        // alert("AGREGADO AL CARRITO");S
     };
 
     return (

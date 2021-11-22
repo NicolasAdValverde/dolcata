@@ -17,12 +17,12 @@ export function ItemListContainer() {
         const dataBase = getFirestore();
 
         if (id) {
-            const dataBaseQuery = dataBase
+            const dataBaseCategory = dataBase
                 .collection("items")
                 .where("category", "==", id)
                 .get();
 
-            dataBaseQuery
+            dataBaseCategory
                 .then((response) =>
                     setProduct(
                         response.docs.map((item) => ({
@@ -52,23 +52,6 @@ export function ItemListContainer() {
                 .finally(() => setLoading(false));
         }
     }, [id]);
-
-    //     if (id) {
-    //         getFetch
-    //             .then((res) => {
-    //                 setProduct(res.filter((prod) => prod.categoria === id));
-    //             })
-    //             .catch((err) => console.log(err))
-    //             .finally(() => setLoading(false));
-    //     } else {
-    //         getFetch
-    //             .then((res) => {
-    //                 setProduct(res);
-    //             })
-    //             .catch((err) => console.log(err))
-    //             .finally(() => setLoading(false));
-    //     }
-    // }, [id]);
 
     return (
         <div>

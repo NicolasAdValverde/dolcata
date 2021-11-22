@@ -1,6 +1,7 @@
 import { Item } from "../Item/Item";
+import { memo } from "react";
 
-export const ItemList = ({ product }) => {
+export const ItemList = memo(({ product }) => {
     return (
         <div className="contain-cards">
             {product.map((prod) => (
@@ -8,4 +9,4 @@ export const ItemList = ({ product }) => {
             ))}
         </div>
     );
-};
+});

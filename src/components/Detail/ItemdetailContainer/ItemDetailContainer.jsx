@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { Loader } from "../../Loader/Loader";
-// import { getFetchDetail } from "../../services/getFetchDetail";
 import { getFirestore } from "../../services/getFirestore";
 
 export const ItemDetailContainer = () => {
@@ -15,26 +14,14 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         const dataBase = getFirestore();
 
-        const dataBaseQuery = dataBase.collection("items").doc(prodId).get();
-
-        dataBaseQuery
+        dataBase
+            .collection("items")
+            .doc(prodId)
+            .get()
             .then((item) => setDetail({ id: item.id, ...item.data() }))
             .catch((error) => alert("Error:", error))
             .finally(() => setLoading(false));
     }, [prodId]);
 
-    //     getFetchDetail
-    //         .then((res) => {
-    //             setDetail(res.find((prod) => prod.id === parseInt(prodId)));
-    //         })
-    //         .catch((err) => console.log(err))
-    //         .finally(() => setLoading(false));
-    // }, [prodId]);
-
-    return (
-        <>
-            {/* <NavBar /> */}
-            {loading ? <Loader /> : <ItemDetail detail={detail} />}
-        </>
-    );
+    return <>{loading ? <Loader /> : <ItemDetail detail={detail} />}</>;
 };
