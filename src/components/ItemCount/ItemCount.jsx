@@ -37,13 +37,7 @@ export function ItemCount({ stock, initial, addToCart }) {
                 -
             </button>
             <button
-                onClick={() =>
-                    addToCartHandler(
-                        console.log(
-                            "capturo la cantidad en ItemCount y la llevo para mostrarla en itemDetail"
-                        )
-                    )
-                }
+                onClick={() => addToCartHandler()}
                 className="button-card-AddToCart-detail"
             >
                 Agregar al carrito
@@ -52,8 +46,6 @@ export function ItemCount({ stock, initial, addToCart }) {
             <Link to="/productos">
                 <button className="button-card-detail">Volver</button>
             </Link>
-
-            {/* La funcion onAdd con el count (estado) me captura la cantidad seleccionada, pero se mostrara en consola en itemDetail*/}
         </div>
     );
 }

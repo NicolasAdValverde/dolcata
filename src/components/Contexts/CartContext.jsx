@@ -11,8 +11,6 @@ const CartContextProvider = ({ children }) => {
     const [itemQuantity, setItemQuantity] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
 
-    // Estado interno del cartContextProvider
-
     const addToCartList = (itemAdded) => {
         setItemQuantity(itemQuantity + itemAdded.quantity);
         setTotalPrice(totalPrice + itemAdded.detail.price * itemAdded.quantity);

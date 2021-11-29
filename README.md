@@ -10,9 +10,9 @@
 
 ###### _Tambien el NavBar en la seccion productos cuenta con un submenu donde esta especificado por categoria, al clickearlas muestran los productos seleccionados por dicho filtro._
 
-###### _La seccion contacto aun en desarrollo mostrara un formulario de contactos y alguna informacion adicional._
+###### _La seccion contacto cuenta con infomacion de contacto._
 
-###### _Y por ultimo la seccion cart, donde se alojaran los productos que se hayan seleccionado y se desean comprar._
+###### _Y por ultimo la seccion cart, donde se alojaran los productos que se hayan seleccionado y se desean comprar y un formulario para rellenar donde devolvera un id con el codigo de compra._
 
 ## Dependencias extra
 
